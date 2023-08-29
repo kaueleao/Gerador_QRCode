@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de QR Code</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <main>
+        <article>
+            <section>
+                <!--Título-->
+                <div class="cabecalho">
+                    <h1>Casa do Papel</h1>
+                </div>
+                
+                <div class="central">
+                    <h1>Gerador de QR Code</h1>
+                    <input id="conteudoQRCode" type="number">
+                </div>
+
+                <div class="botoes">
+                    <button type="button" onclick="GeraQRCode()">
+                        Gerar QR Code
+                     </button>
+                   
+                     <button onclick="downloadImage()">
+                       Salvar
+                    </button>
+                </div>
+            </section>
+        </article>
+    </main>
+    
+</body>
+</html>
