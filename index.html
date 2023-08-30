@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="estilos.css">
     <!--Importação do Icones para os botões-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+    <script src="/scripts.js"></script>
 </head>
 <body>
     <main>
@@ -17,7 +17,7 @@
                     <img src="imagens/logo.jpg" width="145" height="95">
                 </div>
 
-                <div class="titulo">
+                <div class="titulo imprimir">
                     <h1>Casa do Papel</h1>
                 </div>
 
@@ -26,25 +26,27 @@
                     <div class="area">
                         <div>
                             <h1>Informe o ID ou Patrimônio</h1>
-                            <input type="number" id="conteudoQRCode" class="id_patrimonio">
+                            <input type="number" id="conteudoQRCode" class="id_patrimonio" placeholder="Digite o Id ou Patrimônio">
                             <div>
-                                <button class="botao_QRCode"> <!--onclick="GerarQRCode"-->
+                                <button class="botao_QRCode" onclick="GerarQRCode(); mostrarId()">
                                     <i class="fa-solid fa-gear"></i> Gerar
                                 </button>
-                                <button class="botao_Limpar"> <!--onclick="LimparTela"-->
+                                <button class="botao_Limpar" onclick="limpar()"> 
                                     <i class="fa-solid fa-eraser"></i> Limpar
                                 </button>
                             </div>
 
-                            <div class="qrcode-area">
+                            <div class="qrcode-area" id="area-qrcode">
                                 <img id="imageQRCode">
                             </div>
-
                             <div>
-                                <button class="botao_salvar"> <!--onclick="SalvarQRCode"-->
+                                <p>ID: <input type="text" id="retornoId" class="area-id" readonly placeholder="Aguarde..."></p>
+                            </div>
+                            <div>
+                                <button class="botao_salvar" onclick="downloadImage()"> 
                                     <i class="fa-regular fa-floppy-disk"></i> Salvar
                                 </button>
-                                <button class="botao_imprimir"> <!--onclick="LimparTela"-->
+                                <button class="botao_imprimir" id="btn" onclick="imprimir()"> 
                                     <i class="fa-solid fa-print"></i> Imprimir
                                 </button>
                             </div>
