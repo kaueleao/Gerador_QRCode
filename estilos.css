@@ -12,7 +12,7 @@ section {
     display: grid;
     grid-template:
     "logo header header" 100px
-    "sidenav content advert" 650px
+    "sidenav content advert" 750px
     "sidenav qrcode footer" 80px
     / 150px 1fr 100px; /*Valores das colunas*/
 }
@@ -39,8 +39,8 @@ section {
 
 .area {
     margin: 0 auto;
-    height: 500px;
-    width: 700px;
+    height: 600px;
+    width: 900px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 15px;
     background-color: white;
@@ -166,4 +166,11 @@ section {
     /*Efeito clique no botão*/
     transform: scale(0.98);
     box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+.area-id {
+    text-align: center;
+    height: 50px;
+    width: 200px;
+    font-size: 25px;
 }
