@@ -48,11 +48,6 @@ function imprimir(){
         
         tela_impressao.document.write(dados);
         tela_impressao.window.print();
-        
-        setTimeout(function() { 
-            tela_impressao.document.write(dados);
-            tela_impressao.window.print();
-        });
 
         tela_impressao.window.close();
     }
