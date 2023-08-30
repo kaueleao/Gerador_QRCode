@@ -5,33 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerador de QR Code</title>
     <link rel="stylesheet" href="estilos.css">
+    <!--Importação do Icones para os botões-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 </head>
 <body>
     <main>
         <article>
             <section>
-                <!--Título-->
-                <div class="cabecalho">
-                    <h1>Casa do Papel</h1>
-                </div>
-                
-                <div class="central">
-                    <h1>Gerador de QR Code</h1>
-                    <input id="conteudoQRCode" type="number">
+                <div class="logo">
+                    <img src="imagens/logo.jpg" width="145" height="95">
                 </div>
 
-                <div class="botoes">
-                    <button type="button" onclick="GeraQRCode()">
-                        Gerar QR Code
-                     </button>
-                   
-                     <button onclick="downloadImage()">
-                       Salvar
-                    </button>
+                <div class="titulo">
+                    <h1>Casa do Papel</h1>
+                </div>
+
+                <div class="central">
+                    <h1>Gerador de QR Code</h1>
+                    <div class="area">
+                        <div>
+                            <h1>Informe o ID ou Patrimônio</h1>
+                            <input type="number" id="conteudoQRCode" class="id_patrimonio">
+                            <div>
+                                <button class="botao_QRCode"> <!--onclick="GerarQRCode"-->
+                                    <i class="fa-solid fa-gear"></i> Gerar
+                                </button>
+                                <button class="botao_Limpar"> <!--onclick="LimparTela"-->
+                                    <i class="fa-solid fa-eraser"></i> Limpar
+                                </button>
+                            </div>
+
+                            <div class="qrcode-area">
+                                <img id="imageQRCode">
+                            </div>
+
+                            <div>
+                                <button class="botao_salvar"> <!--onclick="SalvarQRCode"-->
+                                    <i class="fa-regular fa-floppy-disk"></i> Salvar
+                                </button>
+                                <button class="botao_imprimir"> <!--onclick="LimparTela"-->
+                                    <i class="fa-solid fa-print"></i> Imprimir
+                                </button>
+                            </div>
+                        </div>
+                        
+                    </div>
                 </div>
             </section>
         </article>
     </main>
-    
 </body>
 </html>
