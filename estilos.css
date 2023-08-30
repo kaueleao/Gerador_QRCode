@@ -10,4 +10,160 @@ body {
 
 section {
     display: grid;
+    grid-template:
+    "logo header header" 100px
+    "sidenav content advert" 650px
+    "sidenav qrcode footer" 80px
+    / 150px 1fr 100px; /*Valores das colunas*/
+}
+
+.logo {
+    grid-area: logo;
+}
+
+.titulo {
+    grid-area: header;
+    color: white;
+    font-size: 30px;
+    align-self: center;
+}
+
+.central {
+    grid-area: content;
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    border: 8px solid white;
+    border-radius: 20px;
+}
+
+.area {
+    margin: 0 auto;
+    height: 500px;
+    width: 700px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 15px;
+    background-color: white;
+    color: black;
+    align-self: center;
+}
+
+.area  h1 {
+    margin: 10px;
+    padding-top: 20px;
+}
+
+.id_patrimonio {
+    background-color: rgb(199, 199, 199);
+    height: 50px;
+    width: 300px;
+    border-radius: 5px;
+    border: none;
+    font-size: 25px;
+    text-align: center;
+}
+
+.id_patrimonio:hover {
+    border: 2px solid black;
+}
+
+.botao_QRCode {
+    background-color: #004f88;
+    border: none;
+    color: white;
+    height: 50px;
+    width: 110px;
+    margin-top: 10px;
+    font-size: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.botao_QRCode:hover {
+    box-shadow: 0 0 40px 40px #0173c4 inset;
+    cursor: pointer;
+}
+
+.botao_QRCode:active {
+    /*Efeito clique no botão*/
+    transform: scale(0.98);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+.botao_Limpar {
+    background-color: red;
+    border: none;
+    color: white;
+    height: 50px;
+    width: 110px;
+    margin-top: 10px;
+    font-size: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.botao_Limpar:hover{
+    box-shadow: 0 0 40px 40px rgb(255, 69, 69) inset;
+    cursor: pointer;
+}
+
+.botao_Limpar:active {
+     /*Efeito clique no botão*/
+     transform: scale(0.98);
+     box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+.qrcode-area {
+    height: 200px;
+    width: 250px;
+    background-color: rgb(198, 193, 193);
+    margin: 0 auto;
+    margin-top: 30px;
+    border-radius: 5px;
+}
+
+.botao_salvar {
+    background-color: green;
+    border: none;
+    color: white;
+    height: 50px;
+    width: 110px;
+    margin-top: 10px;
+    font-size: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.botao_salvar:hover {
+    box-shadow: 0 0 40px 40px rgb(13, 185, 13) inset;
+    cursor: pointer;
+}
+
+.botao_salvar:active {
+      /*Efeito clique no botão*/
+      transform: scale(0.98);
+      box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+.botao_imprimir {
+    background-color: gray;
+    border: none;
+    color: black;
+    height: 50px;
+    width: 110px;
+    margin-top: 10px;
+    font-size: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.botao_imprimir:hover {
+    box-shadow: 0 0 40px 40px rgb(190, 190, 190) inset;
+    cursor: pointer;
+}
+
+.botao_imprimir:active{
+    /*Efeito clique no botão*/
+    transform: scale(0.98);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
 }
