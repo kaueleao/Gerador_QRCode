@@ -1,61 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gerador de QR Code</title>
-    <link rel="stylesheet" href="estilos.css">
-    <!--Importação do Icones para os botões-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="/scripts.js"></script>
-</head>
-<body>
-    <main>
-        <article>
-            <section>
-                <div class="logo">
-                    <img src="imagens/logo.jpg" width="145" height="95">
-                </div>
-
-                <div class="titulo imprimir">
-                    <h1>Casa do Papel</h1>
-                </div>
-
-                <div class="central">
-                    <h1>Gerador de QR Code</h1>
-                    <div class="area">
-                        <div>
-                            <h1>Informe o ID ou Patrimônio</h1>
-                            <input type="number" id="conteudoQRCode" class="id_patrimonio" placeholder="Digite o Id ou Patrimônio">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gerador de QR Code</title>
+        <link rel="stylesheet" type="text/css" href="estilos.css">
+        <!--O link abaixo é para a realizar a importação dos icones utilizados nos botões. Mais icones em www.https://fontawesome.com/icons-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <script src="/scripts.js"></script>
+    </head>
+    <body>
+        <main>
+            <article>
+                <section>
+                    <div class="logo">
+                        <img
+                            src="imagens/logo.jpg"
+                            width="145"
+                            height="95"
+                            alt="logo"
+                        >
+                    </div>
+                    <div class="titulo-pagina">
+                        <h1>Casa do Papel</h1>
+                    </div>
+                    <div class="div-principal">
+                        <h1>Gerador de QR Code</h1>
+                        <div class="div-central">
                             <div>
-                                <button class="botao_QRCode" onclick="GerarQRCode(); mostrarId()">
-                                    <i class="fa-solid fa-gear"></i> Gerar
-                                </button>
-                                <button class="botao_Limpar" onclick="limpar()"> 
-                                    <i class="fa-solid fa-eraser"></i> Limpar
-                                </button>
-                            </div>
-
-                            <div class="qrcode-area" id="area-qrcode">
-                                <img id="imageQRCode">
-                            </div>
-                            <div>
-                                <p>ID: <input type="text" id="retornoId" class="area-id" readonly placeholder="Aguarde..."></p>
-                            </div>
-                            <div>
-                                <button class="botao_salvar" onclick="downloadImage()"> 
-                                    <i class="fa-regular fa-floppy-disk"></i> Salvar
-                                </button>
-                                <button class="botao_imprimir" id="btn" onclick="imprimir()"> 
-                                    <i class="fa-solid fa-print"></i> Imprimir
-                                </button>
+                                <h1>Informe o ID ou Patrimônio</h1>
+                                <input
+                                    type="number"
+                                    id="informacaoId"
+                                    class="input-patrimonio-id"
+                                    placeholder="Digite o Patrimônio ou ID"
+                                >
+                                <div>
+                                    <button class="botao-gerar-qrcode" onclick="gerarQrcode(); mostrarId()">
+                                        <i class="fa-solid fa-gear"></i>
+                                        <!--Importação ícone do botão Gerar-->
+                                        Gerar
+                                    </button>
+                                    <button class="botao-limpar" onclick="limpar()">
+                                        <i class="fa-solid fa-eraser"></i>
+                                        <!--Importação ícone do botão Limpar-->
+                                        Limpar
+                                    </button>
+                                </div>
+                                <div class="qrcode-area" id="area-qrcode">
+                                    <img id="imagemQrcode">
+                                </div>
+                                <div>
+                                    <input
+                                        type="text"
+                                        id="retornoId"
+                                        class="area-patrimonio-id"
+                                        readonly
+                                        placeholder="Aguarde..."
+                                    >
+                                    <p>Patrimônio / ID</p>
+                                </div>
+                                <div>
+                                    <button class="botao-salvar" onclick="downloadImage()">
+                                        <i class="fa-regular fa-floppy-disk"></i>
+                                        <!--Importação ícone do botão Salvar-->
+                                        Salvar
+                                    </button>
+                                    <button class="botao-imprimir" id="btn" onclick="imprimir()">
+                                        <i class="fa-solid fa-print"></i>
+                                        <!--Importação ícone do botão Imprimir-->
+                                        Imprimir
+                                    </button>
+                                </div>
                             </div>
                         </div>
-                        
                     </div>
-                </div>
-            </section>
-        </article>
-    </main>
-</body>
+                </section>
+            </article>
+        </main>
+    </body>
 </html>

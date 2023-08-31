@@ -1,59 +1,79 @@
+/* Configuração básica para o CSS */
 body {
     margin: 0;
     padding: 0;
-    background-color: white;
     font-family: Arial, Helvetica, sans-serif;
     height: 100vh;
-    grid-gap: 10px;
-    background-color:#004f88;
+    background-color: #004f88;
 }
 
+/* ################################### */
+
+/* Estrutura do grid-template */
 section {
     display: grid;
     grid-template:
-    "logo header header" 100px
-    "sidenav content advert" 750px
-    "sidenav qrcode footer" 80px
-    / 150px 1fr 100px; /*Valores das colunas*/
+        "logo header header"100px
+        /* 1ª Linha */
+        "sidenav content advert"750px
+        /* 2ª Linha */
+        "sidenav qrcode footer"80px
+        /* 3ª Linha */
+        / 150px 1fr 100px;
+    /* Tamanho aplicado para as colunas */
 }
 
+/* ################################### */
+
+/* Estrutura do Cabeçalho */
 .logo {
     grid-area: logo;
 }
 
-.titulo {
+.titulo-pagina {
     grid-area: header;
     color: white;
     font-size: 30px;
     align-self: center;
 }
 
-.central {
+/* ################################### */
+
+/* Estrutura do Div Principal */
+.div-principal {
     grid-area: content;
-    color: white;
-    font-size: 25px;
-    text-align: center;
+
     border: 8px solid white;
     border-radius: 20px;
 }
 
-.area {
+.div-principal h1 {
+    text-align: center;
+    color: white;
+    font-size: 25px;
+}
+
+/* ################################### */
+
+/* Estrutura da Div Central */
+.div-central {
     margin: 0 auto;
-    height: 600px;
+    text-align: center;
+    height: 630px;
     width: 900px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 15px;
     background-color: white;
-    color: black;
-    align-self: center;
 }
 
-.area  h1 {
+.div-central h1 {
     margin: 10px;
     padding-top: 20px;
+    color: black;
+    text-align: center;
 }
 
-.id_patrimonio {
+.input-patrimonio-id {
     background-color: rgb(199, 199, 199);
     height: 50px;
     width: 300px;
@@ -61,13 +81,14 @@ section {
     border: none;
     font-size: 25px;
     text-align: center;
+    margin: 0 auto;
 }
 
-.id_patrimonio:hover {
+.input-patrimonio-id:hover {
     border: 2px solid black;
 }
 
-.botao_QRCode {
+.botao-gerar-qrcode {
     background-color: #004f88;
     border: none;
     color: white;
@@ -79,18 +100,18 @@ section {
     text-align: center;
 }
 
-.botao_QRCode:hover {
+.botao-gerar-qrcode:hover {
     box-shadow: 0 0 40px 40px #0173c4 inset;
     cursor: pointer;
 }
 
-.botao_QRCode:active {
+.botao-gerar-qrcode:active {
     /*Efeito clique no botão*/
     transform: scale(0.98);
     box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
 }
 
-.botao_Limpar {
+.botao-limpar {
     background-color: red;
     border: none;
     color: white;
@@ -102,15 +123,15 @@ section {
     text-align: center;
 }
 
-.botao_Limpar:hover{
+.botao-limpar:hover {
     box-shadow: 0 0 40px 40px rgb(255, 69, 69) inset;
     cursor: pointer;
 }
 
-.botao_Limpar:active {
-     /*Efeito clique no botão*/
-     transform: scale(0.98);
-     box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+.botao-limpar:active {
+    /*Efeito clique no botão*/
+    transform: scale(0.98);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
 }
 
 .qrcode-area {
@@ -120,9 +141,10 @@ section {
     margin: 0 auto;
     margin-top: 30px;
     border-radius: 5px;
+    border: 2px solid black;
 }
 
-.botao_salvar {
+.botao-salvar {
     background-color: green;
     border: none;
     color: white;
@@ -134,18 +156,18 @@ section {
     text-align: center;
 }
 
-.botao_salvar:hover {
+.botao-salvar:hover {
     box-shadow: 0 0 40px 40px rgb(13, 185, 13) inset;
     cursor: pointer;
 }
 
-.botao_salvar:active {
-      /*Efeito clique no botão*/
-      transform: scale(0.98);
-      box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+.botao-salvar:active {
+    /*Efeito clique no botão*/
+    transform: scale(0.98);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
 }
 
-.botao_imprimir {
+.botao-imprimir {
     background-color: gray;
     border: none;
     color: black;
@@ -157,20 +179,23 @@ section {
     text-align: center;
 }
 
-.botao_imprimir:hover {
+.botao-imprimir:hover {
     box-shadow: 0 0 40px 40px rgb(190, 190, 190) inset;
     cursor: pointer;
 }
 
-.botao_imprimir:active{
+.botao-imprimir:active {
     /*Efeito clique no botão*/
     transform: scale(0.98);
     box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
 }
 
-.area-id {
+.area-patrimonio-id {
+    margin-top: 10px;
     text-align: center;
     height: 50px;
-    width: 200px;
+    width: 180px;
     font-size: 25px;
 }
+
+/* ################################### */
