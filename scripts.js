@@ -38,17 +38,17 @@ function mostrarId (){
 }
 
 function imprimir(){
-    document.getElementById('btn').onclick = function() {
-        var parametro1 = document.getElementById('area-qrcode').innerHTML;
+      /* O erro está na linha comentada, pois estava passando mais um evento onclick 
+        e por isso só funcionava no segundo clique do botão imprimir. Alinha será removida na versão final.
+      */
+        //document.getElementById('btn').onclick = function() 
+    var parametro1 = document.getElementById('area-qrcode').innerHTML;
 
-        var dados = "" + parametro1 + "<br> > > > >  Patrimônio / ID: " + conteudo + " < < < < <";
+    var dados = "" + parametro1 + "<br> > > > >  Patrimônio / ID: " + conteudo + " < < < < <";
         
-        tela_impressao = window.open('about:blank');
-     
-        
-        tela_impressao.document.write(dados);
-        tela_impressao.window.print();
-
-        tela_impressao.window.close();
-    }
+    tela_impressao.document.write(dados);
+    tela_impressao.document.close(); // Importante para garantir que os dados sejam carregados antes de imprimir
+    tela_impressao.window.print();
+    tela_impressao.window.close();
+    location.reload();
 }
